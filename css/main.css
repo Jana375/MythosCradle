@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+}
+
+* {
+    outline: 1px solid red !important;
+}
+
+@font-face {
+    font-family: "TitleFont";
+    src: url("../assets/fonts/mythology_of_egypt/Mythology\ Of\ Egypt.otf");
+} 
+
+.header {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeDiv {
+    background: url('../assets/img/homeHeader.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 115vh;
+}
+
+.navbar{
+    position: absolute;
+    top: 14px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    margin: 50px;
+    margin-bottom: 0;
+    border-radius: 40px;
+    background: rgba(250, 247, 250, 0.8);
+    border-bottom: 1px solid #ddd;
+
+}
+
+.navLinks{
+    display: flex;
+    gap: 30px;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-family: 'Poppins';
+    font-size: 16pt;
+}
+
+.navLinks a.active{
+    color: #15d5f5;
+}
+
+.navActions {
+    width: 100px;
+}
+
+.navLogo {
+    height: 70px;
+    display: block;
+    cursor: pointer;
+}
+
+.homeContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+.heroTitle {
+    /* display: flex; */
+    width: 40%;
+    /* height: 20%; */
+    font-family: 'TitleFont';
+    color: #e9ad1c;
+    font-size: 90px;
+    font-weight: lighter;
+    padding-right: 135px;
+    padding-bottom: px;
+    line-height: 1;
+}
+
+.heroSlogan {
+    font-family: 'Metamorphous' ;
+    font-size: 25px;
+    color: #ffff;
+    width: 40%;
+    padding-right: 50px;
+}
+
+.carouselFrame {
+    width: 600px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+}
+
+
+.featuredSection {
+    background-color: #002d68;
+    padding: 44px 0;
+    color: white;
+}
+
+.featuredContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.featuredImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.featuredTitle {
+    margin: 0;
+    font-size: 40pt;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+.titleTop, .titleBottom {
+    display: block;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 40pt;
+}
+
+.featuredText {
+    margin: 14px 0 0 0;
+    font-family: 'Poppins';
+    font-size: 16pt;
+    color: white;
+}
+
+.featuredSub {
+    color: #e9ad1c;
+    font-family: "Poppins";
+    font-size: 18pt;
+    font-weight: 500;
+}
+
+.featuredContent {
+    width: 380px;
+}
+
+.featuredButton {
+    background: #15d5f5;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 18px;
+    color: white;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 16pt;
+    margin-top: 14px;
+}
+
+
+.contactHeader {
+    height: 50vh;
+    background-image: url(../assets/img/contactHeader.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.contactNavbar {
+    position:absolute;
+    top: 14px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    margin: 50px;
+    border-radius: 40px;
+    background: rgba(250, 247, 250, 0.8);
+    border-bottom: 1px solid #ddd;
+
+}
+
+.contactNavlinks {
+    display: flex;
+    gap: 30px;
+}
+
+.contactNavlinks a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-family: 'Poppins';
+    font-size: 16pt;
+}
+
+.contactNavlinks a.active {
+    color: #15d5f5;
+}
+
+.contactUs {
+    color: white;
+    font-family: 'TitleFont';
+    font-size: 96pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.contactSection{
+    padding: 60px 40px;
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contactInfo, .contactForm{
+    width: 40%;
+    padding: 20px;
+}
+
+.contactForm form{
+    padding: 20px;
+    gap: 10px;
+    background-image: url(../assets/img/formBackground.png);
+    border-radius: 20px;
+    width: 395px;
+    background-size: contain;
+}
+
+.formHeading {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18pt;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.formElement{
+    width: 100%;
+    padding: 10px;
+    color: white;
+    margin-top: 7px;
+}
+
+.contactForm input, 
+.contactForm select,
+.contactForm textarea{
+    width: 95%;
+    padding: 10px 0;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Poppins';
+}
+
+.contactForm button{
+    padding: 20px;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-left: 10px;
+    background-color: #15d5f5;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.contactForm button:hover{
+    background-color: darkblue;
+    border-radius: 12px;
+}
+
+.aboutSection {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutText {
+    width: 500px;
+}
+
+.aboutImage {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 90px;
+    height: 619px;
+    width: 574px;
+}
+
