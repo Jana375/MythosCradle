@@ -1,325 +1,823 @@
-body{
-    margin: 0;
-}
-
-* {
-    outline: 1px solid red !important;
+@font-face {
+    font-family: 'Mythology Of Egypt';
+    src: url('../assets/fonts/mythology_of_egypt/Mythology Of Egypt.otf') format('opentype'),
+         url('../assets/fonts/mythology_of_egypt/Mythology Of Egypt.ttf') format('truetype');
+    font-weight: 400;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: "TitleFont";
-    src: url("../assets/fonts/mythology_of_egypt/Mythology\ Of\ Egypt.otf");
-} 
-
-.header {
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Metamorphous';
+    src: url('../assets/fonts/Metamorphous/Metamorphous-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
-.homeDiv {
-    background: url('../assets/img/homeHeader.png');
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid red !important; */
+}
+
+body {
+    /* width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.tabbedText {
+    white-space: pre;
+    tab-size: 4;
+}
+
+.homeHeader {
+    position: relative;
+    width: 100%;
+    height: 810px;
+    background-image: url('../assets/img/homeHeader.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 115vh;
 }
 
-.navbar{
+.adoptionHeader {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.adoptionHeader::before {
+    content: "";
     position: absolute;
-    top: 14px;
-    left: 40px;
-    right: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/adoptHeader.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+}
+
+.adoptionHeader > * {
+    position: relative;
+}
+
+.contactHeader {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url('../assets/img/contactHeader.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 12px 40px;
+}
+
+.navContainer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    margin: 50px;
-    margin-bottom: 0;
-    border-radius: 40px;
-    background: rgba(250, 247, 250, 0.8);
-    border-bottom: 1px solid #ddd;
-
+    justify-content: space-between;
+    width: 100%;
 }
 
-.navLinks{
+.navLogo img {
+    height: 58px;
+    width: auto;
+}
+
+.navMenu {
     display: flex;
-    gap: 30px;
+    list-style: none;
+    gap: 48px;
+    margin: 0;
+    padding: 0;
 }
 
-.navLinks a{
+.navMenu a {
     text-decoration: none;
-    color: black;
-    font-weight: 400;
-    font-family: 'Poppins';
-    font-size: 16pt;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-.navLinks a.active{
+.navMenu a:hover {
     color: #15d5f5;
 }
 
-.navActions {
-    width: 100px;
+.navMenu a.active {
+    color: #15d5f5;
+    position: relative;
 }
 
-.navLogo {
-    height: 70px;
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 260px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 8px 0 0;
+    gap: 0;
+}
+
+.searchBar input {
+    flex: 1 1 auto;
+    padding: 12px 20px 12px 40px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 16px;
+    color: #002d68;
+    outline: none;
+    min-width: 0;
+}
+
+.searchBar input::placeholder {
+    color: #999;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #002d68;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.navCart {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.navCart button {
+    position: relative;
+    background: none;
+    border: none;
+    color: #002d68;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+}
+
+.navBadge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #15d5f5;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerTitleContainer {
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.headerTitle {
+    font-family: "Mythology Of Egypt", sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.homeHeaderTitleContainer {
+    position: absolute;
+    max-width: 500px;
+    bottom: 100px;
+    right: 50px;
+    text-align: left;
+}
+
+.homeHeaderTitle {
+    font-family: "Mythology Of Egypt", sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: #e9ad1c;
+    margin: 0;
+    line-height: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.headerTagline {
+    font-family: 'Metamorphous', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 16px;
+    letter-spacing: 0.5px;
+}
+
+.footer {
+    background: #ffffff;
+    color: #000000;
+    padding: 28px 0 20px;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footerBrand {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerLogo {
+    height: 50px;
+    width: auto;
+}
+
+.footerTagline {
+    margin: 0;
+    font-family: 'Metamorphous', sans-serif;
+    font-size: 13pt;
+    color: #000000;
+    max-width: 320px;
+    line-height: 1.3;
+}
+
+.footerHeading {
+    margin: 0 0 20px;
+    font-size: 18pt;
+    font-weight: 700;
+    color: #002d68;
+}
+
+.footerLinks a {
     display: block;
+    text-decoration: none;
+    color: #000000;
+    font-size: 13pt;
+    margin-bottom: 8px;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footerIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: block;
+}
+
+.dividerLine {
+    border-top: 1px solid #000000;
+    width: 100%;
+    margin: 30px 0 20px;
+}
+
+.footerLegal {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+    align-items: center;
+    font-size: 10pt;
+}
+
+.footerCopyright {
+    margin: 0;
+    color: #000000;
+}
+
+.footerTerms a {
+    text-decoration: none;
+    color: #000000;
+    margin-left: 20px;
+}
+
+.footerLinks a:hover,
+.footerTerms a:hover {
+    color: #15d5f5;
+}
+
+/* ======================
+   ADOPTION PAGE
+   ====================== */
+.adoptionIntro {
+    background-color: #002d68;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.introHeading {
+    text-align: center;
+    font-family: 'Metamorphous', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #e9ad1c;
+    margin: 0 0 24px 0;
+}
+
+.introText {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #ffffff;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.adoptFilterBar {
+    background-color: #e9ad1c;
+    color: #002d68;
+    padding: 18px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.filterLeft {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.filterBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
 }
 
-.homeContainer {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-bottom: 20px;
+.resultsText {
+    font-weight: 600;
+    color: #ffffff;
 }
-.heroTitle {
-    /* display: flex; */
-    width: 40%;
-    /* height: 20%; */
-    font-family: 'TitleFont';
-    color: #e9ad1c;
-    font-size: 90px;
-    font-weight: lighter;
-    padding-right: 135px;
-    padding-bottom: px;
+
+.filterRight {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.showGroup,
+.sortGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+}
+
+.showSelect,
+.sortSelect {
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.creatureDetail {
+    margin: 0px auto 0px;
+    padding: 60px 100px;
+    display: flex;
+    gap: 80px;
+}
+
+.creatureDetail.oddRow {
+    background-color: #ffffff;    
+}
+
+.creatureDetail.evenRow {
+    background-color: #002d68;
+}
+
+.productImage img {
+    width: 464px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.productInfo {
+    flex: 1;
+}
+
+.creatureName {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 12px;
     line-height: 1;
 }
 
-.heroSlogan {
-    font-family: 'Metamorphous' ;
-    font-size: 25px;
-    color: #ffff;
-    width: 40%;
-    padding-right: 50px;
+.creatureName.oddRow {
+    color: #000000;
 }
 
-.carouselFrame {
-    width: 600px;
-    height: 600px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    background: transparent;
+.creatureName.evenRow {
+    color: #ffffff;    
 }
 
-
-.featuredSection {
-    background-color: #002d68;
-    padding: 44px 0;
-    color: white;
+.priceRow {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 16px;
 }
 
-.featuredContainer {
+.currentPrice {
+    font-size: 22px;
+    color: #999999;
+}
+
+.originalPrice {
+    font-size: 22px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.rating {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 48px;
+    gap: 16px;
+    margin-bottom: 28px;
 }
 
-.featuredImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.featuredTitle {
-    margin: 0;
-    font-size: 40pt;
-    font-family: 'Poppins';
-    font-weight: bold;
-}
-
-.titleTop, .titleBottom {
-    display: block;
-    color: white;
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 40pt;
-}
-
-.featuredText {
-    margin: 14px 0 0 0;
-    font-family: 'Poppins';
-    font-size: 16pt;
-    color: white;
-}
-
-.featuredSub {
+.stars {
+    font-size: 16px;
     color: #e9ad1c;
-    font-family: "Poppins";
-    font-size: 18pt;
-    font-weight: 500;
 }
 
-.featuredContent {
-    width: 380px;
+.delimiter {
+    border-left: 1px solid #000000;
+    width: 1px;
+    height: 30px;
+    margin: 0 10px;
 }
 
-.featuredButton {
-    background: #15d5f5;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 18px;
-    color: white;
-    cursor: pointer;
-    font-family: "Poppins";
-    font-size: 16pt;
-    margin-top: 14px;
+.delimiter.oddRow {
+    border-color: #000000;
 }
 
+.delimiter.evenRow {
+    border-color: #ffffff;
+}
 
-.contactHeader {
-    height: 50vh;
-    background-image: url(../assets/img/contactHeader.png);
+.rater {
+    padding: 4px 18px;
+    font-size: 14px;
+}
+
+.rater.oddRow {
+    color: #000000;
+}
+
+.rater.evenRow {
+    color: #ffffff;
+}
+
+.creatureDescription {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333333;
+    margin-bottom: 20px;
+    max-width: 620px;
+}
+
+.creatureDescription.oddRow {
+    color: #333333;
+}
+
+.creatureDescription.evenRow {
+    color: #ffffff;
+}
+
+.addToCartSection {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.contactNavbar {
-    position:absolute;
-    top: 14px;
-    left: 40px;
-    right: 40px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    margin: 50px;
-    border-radius: 40px;
-    background: rgba(250, 247, 250, 0.8);
-    border-bottom: 1px solid #ddd;
-
+    gap: 28px;
+    margin-bottom: 20px;
 }
 
-.contactNavlinks {
+.quantitySelector {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.contactNavlinks a{
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-    font-family: 'Poppins';
-    font-size: 16pt;
+.quantitySelector.oddRow {
+    background: #002d68;
+    border: 2px solid #002d68;
 }
 
-.contactNavlinks a.active {
-    color: #15d5f5;
+.quantitySelector.evenRow {
+    background: #e9ad1c;
+    border: 2px solid #e9ad1c;
 }
 
-.contactUs {
-    color: white;
-    font-family: 'TitleFont';
-    font-size: 96pt;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.contactSection{
-    padding: 60px 40px;
-}
-
-.contactContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.contactInfo, .contactForm{
-    width: 40%;
-    padding: 20px;
-}
-
-.contactForm form{
-    padding: 20px;
-    gap: 10px;
-    background-image: url(../assets/img/formBackground.png);
-    border-radius: 20px;
-    width: 395px;
-    background-size: contain;
-}
-
-.formHeading {
-    color: white;
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 18pt;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.formElement{
-    width: 100%;
-    padding: 10px;
-    color: white;
-    margin-top: 7px;
-}
-
-.contactForm input, 
-.contactForm select,
-.contactForm textarea{
-    width: 95%;
-    padding: 10px 0;
-    padding-left: 5px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: 'Poppins';
-}
-
-.contactForm button{
-    padding: 20px;
-    padding-right: 60px;
-    padding-left: 60px;
-    margin-left: 10px;
-    background-color: #15d5f5;
-    color: white;
-    font-family: 'Poppins';
-    font-weight: bold;
+.qtyBtn {
+    width: 30px;
+    height: 54px;
+    color: #ffffff;
     border: none;
+    font-size: 26px;
+    font-weight: 700;
     cursor: pointer;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    margin-top: 12px;
 }
 
-.contactForm button:hover{
-    background-color: darkblue;
+.qtyBtn.oddRow {
+    background: #002d68;
+}
+
+.qtyBtn.evenRow {
+    background: #e9ad1c;
+}
+
+.qtyValue {
+    padding: 0 24px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    min-width: 50px;
+    text-align: center;
+}
+
+.qtyValue.oddRow{
+    background: #002d68;
+}
+
+.qtyValue.evenRow{
+    background: #e9ad1c;
+}
+
+.addToCradleBtn {
+    background: #15d5f5;
+    color: #ffffff;
+    border: none;
+    padding: 16px 52px;
     border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addToCradleBtn:hover {
+    background: #002d68;
+    transform: translateY(-3px);
+}
+
+.creatureSpecs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.creatureSpecs.oddRow {
+    color: #333333;
+}
+
+.creatureSpecs.evenRow {
+    color: #ffffff;
+}
+
+.spec {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* ======================
+   CONTACT PAGE
+   ====================== */
+.contactContent {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 40px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .aboutSection {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    gap: 80px;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.aboutLeft { flex: 1; }
+.aboutRight { flex: 1; max-width: 619px; }
+
+.sectionTitle {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #15d5f5;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.sectionTitle.about {
+    margin-top: 60px;
+}
+
+.aboutHeading {
+    font-size: 52px;
+    font-weight: 700;
+    color: #002d68;
+    margin: 0 0 24px;
+    line-height: 1;
 }
 
 .aboutText {
-    width: 500px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    max-width: 580px;
 }
 
-.aboutImage {
+.dragonImage {
+    width: 100%;
+    height: auto;
     border-radius: 20px;
-    overflow: hidden;
-    margin-top: 90px;
-    height: 619px;
-    width: 574px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
+.contactInfoSection {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 619px;
+    max-width: 100%;
+}
+
+.socialHeading,
+.locationHeading {
+    font-size: 38px;
+    font-weight: 700;
+    color: #002d68;
+    margin: 8px 0 24px 0;
+}
+
+.socialIconsContact {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.socialIcon {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+    transition: transform 0.3s;
+}
+
+.locationMap {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.mapIframe {
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 16px;
+}
+
+.contactFormSection {
+    background: url('../assets/img/formBackground.png');
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    padding: 60px 50px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    width: 619px;
+    max-width: 100%;
+}
+
+.formTitle {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0 0 40px;
+    color: #ffffff;
+    position: relative;
+}
+
+.contactForm {
+    position: relative;
+}
+
+.contactForm .formGroup {
+    margin-bottom: 26px;
+}
+
+.contactForm label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.95);
+    font-size: 16px;
+    color: #002d68;
+    outline: none;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    background: #ffffff;
+}
+
+.contactForm textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.submitBtn {
+    background: #15d5f5;
+    color: #ffffff;
+    border: none;
+    padding: 16px 60px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
