@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +15,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
 </head>
+
 <body>
     <header class="homeHeader">
-        <nav class="navbar">
+        <nav class="navBar">
             <div class="navContainer">
                 <div class="navLogo">
                     <img src="assets/img/logo.png" alt="The Mythos Cradle">
@@ -37,7 +44,7 @@
                         <input type="text" placeholder="Search">
                         <div class="navCart">
                             <button>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <i class="fa-solid fa-basket-shopping"></i>
                                 <span class="navBadge">2</span>
                             </button>
                         </div>
@@ -53,6 +60,101 @@
     </header>
 
     <main>
+        <section class="introSection">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/img/imageSlider1.png" class="d-block w-100" alt="Legend 1">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="introContent">
+                <h2>BEGIN YOUR JOURNEY</h2>
+                <h1>Tiny Legends Big Hearts</h1>
+                <p>Begin your journey into legend : tiny dragons,
+                    shimmering pegasi, mischievous kitsune, and
+                    watchful basilisks are ready to meet their families.
+                    Delight in enchanted encounters, gentle care, and
+                    joyful playtime. Heartwarming bonds await as these
+                    legendary creatures find their forever homes.</p>
+
+                <button class="introBtn">Cradle a Legend</button>
+            </div>
+        </section>
+
+        <section class="subSection">
+
+            <div class="subContent">
+                <h2>THE CRADLE</h2>
+                <h1>A Sanctuary Where Mythical
+                    Creatures Find Families</h1>
+                <p>Discover our carefully nurtured mythical creatures,
+                    each ready to join a loving family. Experience the
+                    joy and wonder of forming a lasting bond, as every
+                    adoption is guided with care, ensuring a safe,
+                    ethical, and heartwarming journey for both
+                    creature and caretaker.</p>
+            </div>
+            <div class="subImage">
+                <img src="./assets/img/homeImg1.png" width="616" height="475">
+            </div>
+        </section>
+
+        <section class="cradleSection">
+            <div class="cradleContent">
+                <h2>LOOKING IN ON PAST FRIENDS</h2>
+                <h1>From Cradle To Family: A Legend At Home</h1>
+            </div>
+            <div class="cradleRow">
+                <div class="cradleCritter1">
+                    <img src="./assets/img/successImg1.png" width="278" height="277">
+                    <h2>Percy’s Quiet Winter Days</h2>
+                    <p>Explore red deserts, ancient relics,
+                        Once shy in the cold, Percy now
+                        explores snowy peaks wrapped in
+                        warmth, curiosity, and family love</p>
+                </div>
+                <div class="cradleCritter2">
+                    <img src="./assets/img/successImg2.png" width="278" height="277">
+                    <h2>Ripple’s Gentle River Home</h2>
+                    <p>Gentle Ripple has found peace
+                        along flowing waters, bonded
+                        closely with a family who
+                        treasures calm and care.</p>
+                </div>
+
+                <div class="cradleCritter3">
+                    <img src="./assets/img/successImg3.png" width="278" height="277">
+                    <h2>Atlas Learns to Trust</h2>
+                    <p>Brave little Atlas grows stronger
+                        each day, learning trust and
+                        courage in a home filled with
+                        patience.</p>
+                </div>
+
+                <div class="cradleCritter4">
+                    <img src="./assets/img/successImg4.png" width="278" height="277">
+                    <h2>Skye’s First Open Skies</h2>
+                    <p>kye’s First Open Skies
+                        Skye’s wings stretch freely at last,
+                        soaring happily above a home
+                        where wonder is always welcome.</p>
+                </div>
+
+                <button class="cradleBtn">Cradle a Legend</button>
+
+            </div>
+        </section>
 
     </main>
 
@@ -102,4 +204,9 @@
         </div>
     </footer>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
 </html>
