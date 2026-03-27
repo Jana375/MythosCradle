@@ -23,7 +23,7 @@
 
 * {
     box-sizing: border-box;
-    outline: 1px solid red !important;
+    /* outline: 1px solid red !important; */
 }
 
 body {
@@ -357,59 +357,47 @@ body {
 
 .cradleSection {
     display: flex;
-     flex-direction: column;
+    flex-direction: column;
     gap: 30px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #002d68;
     font-family: "Poppins";
 }
 
 .cradleContent h2 {
     color: #e9ad1c;
+    text-align: center;
+    margin-bottom: 20px ;
 }
 
 .cradleContent h1 {
     color: white;
+    text-align: center;
 }
 
 .cradleRow {
     color: white;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    
 }
 
-.cradleCritter1 img {
+.cradleCritter {
+    max-width: 320px;
+    padding: 20px;
+    text-align: center;
+}
+
+.cradleCritterImg {
     border-radius: 20px;
-}
-
-.cradleCritter1 h2 {
-    font-size: 25px;
-    font-weight: ;
-}
-
-.cradleCritter2 img {
-    border-radius: 20px;
-}
-
-.cradleCritter2 h2 {
-    font-size: 25px;
-}
-
-.cradleCritter3 img {
-    border-radius: 20px;
-}
-
-.cradleCritter3 h2 {
-    font-size: 25px;
-}
-
-.cradleCritter4 img {
-    border-radius: 20px;
-}
-
-.cradleCritter4 h2 {
-    font-size: 25px;
+    margin-bottom: 20px;
 }
 
 .cradleBtn {
@@ -490,15 +478,14 @@ body {
 
 .dividerLine {
     border-top: 1px solid #cfcdcd;
-    width: 100%;
-    margin: 30px 0 20px;
+    margin: 30px 100px 40px;
 }
 
 .footerLegal {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     padding: 0 100px;
     align-items: center;
     font-size: 10pt;
