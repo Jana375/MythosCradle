@@ -270,11 +270,11 @@ body {
 .introContent {
     width: 600px;
     height: 600px;
-    padding-top: 60px;
+    padding-top: 100px;
 }
 
 .introContent h1 {
-    font-size: 39pt;
+    font-size: 50px;
     color: white;
     font-weight: 700;
     margin-bottom: 20px;
@@ -328,11 +328,11 @@ body {
 .subContent {
     width: 600px;
     height: 600px;
-    padding-top: 60px;
+    padding-top: 150px;
 }
 
 .subContent h1 {
-    font-size: 40pt;
+    font-size: 40px;
     color: #002d68;
     font-weight: 700;
     margin-bottom: 20px;
@@ -372,11 +372,14 @@ body {
     color: #e9ad1c;
     text-align: center;
     margin-bottom: 20px ;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .cradleContent h1 {
     color: white;
     text-align: center;
+    font-weight:600;
 }
 
 .cradleRow {
@@ -395,6 +398,11 @@ body {
     text-align: center;
 }
 
+.cradleCritter h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
 .cradleCritterImg {
     border-radius: 20px;
     margin-bottom: 20px;
@@ -410,6 +418,11 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.cradleBtn:hover {
+    background: #002d68;
+    transform: translateY(-3px);
 }
 
 .footer {
@@ -544,7 +557,7 @@ body {
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .filterLeft {
@@ -561,12 +574,12 @@ body {
     border: none;
     color: #ffffff;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     cursor: pointer;
 }
 
 .resultsText {
-    font-weight: 600;
+    font-weight: 400;
     color: #ffffff;
 }
 
@@ -592,6 +605,7 @@ body {
     padding: 6px 14px;
     font-size: 16px;
     color: #000000;
+    font-family: 'Poppins';
     cursor: pointer;
 }
 
@@ -807,13 +821,13 @@ body {
 }
 
 .viewCradleBtn {
-    position: absolute;
-    right: 0;
-    margin-right: 50px;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
     background: #a07f30;
     color: #ffffff;
     border: none;
-    padding: 16px 52px;
+    padding: 25px 70px;
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
