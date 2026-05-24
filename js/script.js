@@ -1,7 +1,4 @@
 //Thank up pop up message 
-
-//name, email, subject, message
-
 //Get link to form 
 
 let contactForm = document.forms['contactForm'];
@@ -42,3 +39,6 @@ function getFormInfo(event){
 
     contactModal.show();
 }
+
+
+//Search bar 

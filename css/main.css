@@ -306,7 +306,7 @@ body {
 }
 
 .introBtn:hover {
-    background: #002d68;
+    background: #e9ad1c;
     transform: translateY(-3px);
 }
 
@@ -406,23 +406,6 @@ body {
 .cradleCritterImg {
     border-radius: 20px;
     margin-bottom: 20px;
-}
-
-.cradleBtn {
-    background: #15d5f5;
-    color: #ffffff;
-    border: none;
-    padding: 16px 52px;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.cradleBtn:hover {
-    background: #002d68;
-    transform: translateY(-3px);
 }
 
 .footer {
@@ -784,7 +767,7 @@ body {
     background: #e9ad1c;
 }
 
-.addToCradleBtn {
+.cradleBtnOdd {
     background: #15d5f5;
     color: #ffffff;
     border: none;
@@ -796,8 +779,25 @@ body {
     transition: all 0.3s ease;
 }
 
-.addToCradleBtn:hover {
+.cradleBtnOdd:hover {
     background: #002d68;
+    transform: translateY(-3px);
+}
+
+.cradleBtnEven {
+    background: #15d5f5;
+    color: #ffffff;
+    border: none;
+    padding: 16px 52px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cradleBtnEven:hover {
+    background:  #e9ad1c;
     transform: translateY(-3px);
 }
 
