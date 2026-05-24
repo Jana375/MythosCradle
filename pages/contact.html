@@ -10,6 +10,8 @@
         content="Contact The Mythos Cradle for adoption support, inquiries, and more. Find our location and reach out via form or links.">
     <meta name="author" content="Jana Visser, 262010">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -110,7 +112,7 @@
                 <!-- Right Column - Form with new background -->
                 <div class="contactFormSection">
                     <h2 class="formTitle">SEND US A MESSAGE</h2>
-                    <form class="contactForm">
+                    <form class="contactForm" name="contactForm">
                         <div class="formGroup">
                             <label for="name">Your name</label>
                             <input type="text" id="name" placeholder="Abc" required>
@@ -133,6 +135,24 @@
             </div>
         </div>
     </main>
+
+    <div class="modal" id="contactModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Form submission</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body outputContainer">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footerContent">
@@ -179,6 +199,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

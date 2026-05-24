@@ -168,7 +168,7 @@ body {
 
 .searchIcon {
     position: absolute;
-    left: 14px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -192,15 +192,15 @@ body {
     color: #002d68;
     font-size: 26px;
     cursor: pointer;
-    padding: 0 4px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
 }
 
 .navBadge {
     position: absolute;
-    top: -18px;
-    right: -18px;
+    top: -9px;
+    right: -5px;
     background: #15d5f5;
     color: #ffffff;
     font-size: 12px;
@@ -1011,3 +1011,25 @@ body {
     cursor: pointer;
     margin-top: 10px;
 }
+
+/* ======================
+   THANK YOU MODAL
+   ====================== */
+
+.modal-content{
+    background-color: #002d68;
+    color: white;
+}
+
+.modal-header{
+    border-bottom: 3px solid #e9ad1c;
+}
+
+.btn-close{
+    filter: invert(1);
+}
+
+.modal-body span{
+    font-weight: bold;
+}
+
