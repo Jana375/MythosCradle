@@ -61,10 +61,22 @@
 
     <main>
         <section class="introSection">
-            <div id="carouselExample" class="carousel slide">
+            <div id="carouselExample" class="carousel slide custom-carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="./assets/img/imageSlider1.png" class="d-block w-100" alt="Legend 1">
+                        <div class="image-wrapper">
+                            <img src="./assets/img/imageSlider1.png" class="d-block w-100" alt="Legend 1">
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="image-wrapper">
+                            <img src="./assets/img/imageSlider2.png" class="d-block w-100" alt="Legend 2">
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="image-wrapper">
+                            <img src="./assets/img/imageSlider3.png" class="d-block w-100" alt="Legend 3">
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -212,6 +224,8 @@
     crossorigin="anonymous"></script>
 
 <script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+
 
 
 </body>

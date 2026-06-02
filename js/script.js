@@ -136,3 +136,4 @@ function initSearchBar() {
 }
 //Initialize the searchbar when the document is loaded
 document.addEventListener("DOMContentLoaded", initSearchBar);
+
