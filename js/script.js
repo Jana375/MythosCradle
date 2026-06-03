@@ -24,7 +24,7 @@ function getFormInfo(event) {
     //Write the data to a variable for innerHTML 
 
     let output =`
-    <h3>Thank you for submitting, ${formData["name"]}</h3>
+    <p>Thank you for submitting, ${formData["name"]}</p>
     `;
 
      //Select the HTML section that we want to update
