@@ -297,15 +297,15 @@ function wireNavButtons() {
     }
 
     let viewBtn = document.getElementById("viewCradleBtn");
-    viewBtn.addEventListener("click", openCart);
-    
+    if (viewBtn){
+        viewBtn.addEventListener("click", openCart);
+    }
 }
 
-// Wire up the ways to close the popup: clicking the dark background,
-// clicking the X button, or pressing the Escape key.
-function wireCloseControls(overlay) {
-    overlay.addEventListener("click", function (event) {
-        if (event.target === overlay || event.target.closest(".cart-modal-close")) {
+// Wire up the ways to close the popup: clicking the X button.
+function wireCloseControls(modal) {
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal || event.target.closest(".cart-modal-close")) {
             closeCart();
         }
     });
@@ -459,7 +459,7 @@ function setupCart() {
 
     // Grab the popup so we can attach the popup events to it.
     let modal = document.getElementById("cart-modal-overlay");
-    // Wire up the close button and clicking the dark background.
+    // Wire up the close button.
     wireCloseControls(modal);
     // Wire up the two main buttons (Check Out and Continue Shopping).
     wireActionButtons(modal);
